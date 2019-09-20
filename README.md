@@ -29,6 +29,14 @@ Create a `config.json` file that looks like this:
 }
 ```
 
+You can get the access key and client secret by logging into Trustpilot for Business and going to Integrations > APIs. You can get the business unit ID by using the Trustpilot API.
+
+Create a catalog.json file by running the following command:
+
+`tap-trustpilot -c config.json --discover > catalog.json` 
+
+Then, in `catalog.json` under the `schema` for each type of stream (business units, reviews, consumers), add `"selected": true` to enable that type of stream in the export. 
+
 ---
 
 Copyright &copy; 2018 Fishtown Analytics
